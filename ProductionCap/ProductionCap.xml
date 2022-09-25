@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProductionCap>
+	<Resources>
+		<Resource>
+			<Name>Apothecary Shop</Name>
+			<Amount>500</Amount>
+		</Resource>
+		<Resource>
+			<Name>Cooper</Name>
+			<Amount>50</Amount>
+		</Resource>
+		<Resource>
+			<Name>Fishing Shack</Name>
+			<Amount>10000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Windmill</Name>
+			<Amount>10000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Bakery</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Cheesemaker</Name>
+			<Amount>10000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Firewood Splitter</Name>
+			<Amount>10000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Saw Pit</Name>
+			<Amount>10000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Tannery</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Cobbler Shop</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Basket Shop</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Potter Building</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Candle Shop</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Soap Shop</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Furniture Workshop</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Brewery</Name>
+			<Amount>1000</Amount>
+		</Resource>
+		<Resource>
+			<Name>Glassmaker</Name>
+			<Amount>1000</Amount>
+		</Resource>
+	</Resources>
+</ProductionCap>
