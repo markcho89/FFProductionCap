@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using ProductionCap;
 
-[assembly: MelonInfo(typeof(ProductionCapClass),"Production Cap", "0.0.1", "sh89elf")]
+[assembly: MelonInfo(typeof(ProductionCapClass),"Production Cap", "1.0.1", "markcho89")]
 [assembly: MelonGame("Crate Entertainment", "Farthest Frontier")]
 
 // General Information about an assembly is controlled through the following
