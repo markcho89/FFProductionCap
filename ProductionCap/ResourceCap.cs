@@ -3,18 +3,22 @@
     internal class ResourceCap
     {
         public string Name { get; set; }
-        public int Amount { get; set; }
+        public int StopAt { get; set; }
+        public int ResumeAt { get; set; }
 
         public ResourceCap()
         {
             this.Name = "";
-            this.Amount = int.MaxValue;
+            this.StopAt = int.MaxValue;
+            this.ResumeAt = 1;
         }
 
-        public ResourceCap(string Name, int Amount)
+        public ResourceCap(string Name, int StopAt, int ResumeAt)
         {
             this.Name = Name;
-            this.Amount = Amount;
+            this.StopAt = StopAt;
+            this.ResumeAt = ResumeAt < 1 ? 1 : ResumeAt;
+            this.ResumeAt = ResumeAt > StopAt ? StopAt : ResumeAt;
         }
     }
 }
