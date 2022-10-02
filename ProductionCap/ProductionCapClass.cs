@@ -613,6 +613,23 @@ namespace ProductionCap
                         }
                     }
                     break;
+                case "linen clothes":
+                    List<WeaverBuilding> weaverBuildings = gameManager.resourceManager.weaverBuildings;
+                    if (gameManager.resourceManager.linenClothesItemInfo.unusedCount > resourceCap.StopAt)
+                    {
+                        foreach (WeaverBuilding weaverBuilding in weaverBuildings)
+                        {
+                            weaverBuilding.SetWorkEnabled(false, true);
+                        }
+                    }
+                    else if (gameManager.resourceManager.linenClothesItemInfo.unusedCount < resourceCap.ResumeAt)
+                    {
+                        foreach (WeaverBuilding weaverBuilding in weaverBuildings)
+                        {
+                            weaverBuilding.SetWorkEnabled(true, true);
+                        }
+                    }
+                    break;
                 case "soap":
                     List<SoapShop> soapShops = gameManager.resourceManager.soapShops;
                     if (gameManager.resourceManager.soapItemInfo.unusedCount > resourceCap.StopAt)

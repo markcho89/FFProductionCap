@@ -167,6 +167,16 @@
 			</Resources>
 		</Building>
 		<Building>
+			<Name>Weaver Building</Name>
+			<Resources>
+				<Resource>
+					<Name>Linen Clothes</Name>
+					<StopAt>1000</StopAt>
+					<ResumeAt>200</ResumeAt>
+				</Resource>
+			</Resources>
+		</Building>
+		<Building>
 			<Name>Soap Shop</Name>
 			<Resources>
 				<Resource>
