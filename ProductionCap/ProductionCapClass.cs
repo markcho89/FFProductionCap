@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
+using TMPro;
 using UnityEngine;
 
 namespace ProductionCap
@@ -15,6 +16,7 @@ namespace ProductionCap
     public class ProductionCapClass : MelonMod
     {
         private System.Collections.Generic.List<ResourceCap> listResourceCap = new System.Collections.Generic.List<ResourceCap>();
+        private string subSeason = "";
 
         public override void OnUpdate()
         {
@@ -25,10 +27,15 @@ namespace ProductionCap
 
                 if (gameManager != null)
                 {
-                    foreach(ResourceCap resourceCap in listResourceCap)
+                    TimeManager tm = gameManager.timeManager;
+                    if (subSeason != tm.subSeason)
                     {
-                        this.updateBuildingProduction(gameManager, resourceCap);
+                        foreach (ResourceCap resourceCap in listResourceCap)
+                        {
+                            this.updateBuildingProduction(gameManager, resourceCap);
+                        }
                     }
+                    subSeason = tm.subSeason;
                 }
             }
 
@@ -97,6 +104,8 @@ namespace ProductionCap
                 return;
             }
 
+            TradingPost tradingPost = gameManager.resourceManager.tradingPosts[0];
+
             switch (resourceCap.Name.ToLower().TrimStart().TrimEnd())
             {
                 //amenities
@@ -104,10 +113,11 @@ namespace ProductionCap
                     List<ApothecaryShop> apothecaryShops = gameManager.resourceManager.apothecaryShops;
                     if (gameManager.resourceManager.medicineItemInfo.unusedCount > resourceCap.StopAt)
                     {
-                        foreach (ApothecaryShop apothecaryShop in apothecaryShops)
-                        {
-                            apothecaryShop.SetWorkEnabled(false, true);
-                        }
+                            foreach (ApothecaryShop apothecaryShop in apothecaryShops)
+                            {
+                                apothecaryShop.SetWorkEnabled(false, true);
+                            }
+                        
                     } 
                     else if (gameManager.resourceManager.medicineItemInfo.unusedCount < resourceCap.ResumeAt)
                     {
